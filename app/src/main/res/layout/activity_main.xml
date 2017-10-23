@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/animation_list" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo2"
+        android:layout_marginBottom="182dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+           <Button
+               android:id="@+id/button_signin"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:layout_margin="70dp"
+               android:text="Sign In"
+               android:textColor="@android:color/white"
+               android:textAllCaps="false"
+               android:fontFamily="sans-serif-condensed"
+               android:background="@drawable/scrim1" />
+    <Button
+        android:id="@+id/button_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/scrim2"
+        android:alpha="0.1"
+        android:layout_margin="70dp"
+       android:layout_alignBottom="@id/button_signin" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:text="Sign Up"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_alignBaseline="@+id/button_signup"
+        android:layout_alignBottom="@+id/button_signup"
+        android:layout_centerHorizontal="true" />
+
+      </RelativeLayout>
+</FrameLayout>
+    </RelativeLayout>

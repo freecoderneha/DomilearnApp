@@ -1,0 +1,50 @@
+package com.example.neha.ui;
+
+public class PickItem {
+    String name;//title
+    int thumbnail;//image
+    int view;//view scrim
+    int color;//button scrim
+
+    public PickItem(String name, int thumbnail, int view,int color) {
+        this.name = name;
+        this.thumbnail = thumbnail;
+        this.view = view;
+        this.color=color;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+
+    public int getView() {
+        return view;
+    }
+
+    public void setView(int view) {
+        this.view = view;
+    }
+
+    public int getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(int thumbnail) {
+        this.thumbnail = thumbnail;
+    }
+
+    public int getColor() {
+        return color;
+    }
+
+    public void setColor(int color) {
+        this.color = color;
+    }
+}

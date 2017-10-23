@@ -35,10 +35,16 @@ public class PickAdapter extends ArrayAdapter<PickItem> {
         PickItem item = getItem(position);
         TextView text = (TextView) listItemView.findViewById(R.id.text_pick);
         text.setText(item.getName());
-        View view = (View) listItemView.findViewById(R.id.view_pick);
+        final View view = (View) listItemView.findViewById(R.id.view_pick);
         view.setBackgroundResource(item.getView());
         Button button = (Button) listItemView.findViewById(R.id.button_follow_pick);
         button.setBackgroundResource(item.getColor());
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                view.setBackgroundResource(R.color.highlight);
+            }
+        });
         ImageView image = (ImageView) listItemView.findViewById(R.id.thumbnail_pick);
         image.setBackgroundResource(item.getThumbnail());
         return listItemView;

@@ -4,12 +4,14 @@
         <shape>
             <corners android:radius="100dp" />
             <gradient
-                android:startColor="#ff8a65"
-                android:endColor="#795548"
-                android:angle="180"/>
-        </shape> </item>
+                android:endColor="#ff8a65"
+                android:startColor="#f06292"
+                android:angle="360"/>
+        </shape>
+    </item>
 
 </selector>
+
 
 
 

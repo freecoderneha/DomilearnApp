@@ -22,6 +22,14 @@ public class PickActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Pick any 5 topic or more");
+        Button button=(Button) findViewById(R.id.button_submit);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(PickActivity.this,CoursesActivity.class);
+                startActivity(i);
+            }
+        });
         final ArrayList<PickItem> coursesList=new ArrayList<>();
         coursesList.add(new PickItem("JAVA",R.drawable.java,R.drawable.scrim3,R.drawable.scrim11));
         coursesList.add(new PickItem("AR",R.drawable.ar,R.drawable.scrim,R.drawable.scrim8));
@@ -39,6 +47,7 @@ public class PickActivity extends AppCompatActivity {
 
 
         gridView.setAdapter(adapter);
+
 
 
     }

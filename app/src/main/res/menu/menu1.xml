@@ -2,8 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_search"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_action_search_blue"
-        android:title="Search"/>
-</menu>
+        android:id="@+id/action_item1"
+        android:title="Sign"/>
+    <item
+        android:id="@+id/action_item2"
+        android:title="Bookmarks"/>
+   </menu>

@@ -17,6 +17,7 @@
     <style name="TextLabel" parent="TextAppearance.AppCompat">
         <item name="android:textColorHint">@android:color/white</item>
         <item name="android:textSize">18sp</item>
+
         <item name="colorAccent">@android:color/white</item>
         <item name="colorControlNormal">@android:color/white</item>
         <item name="colorControlActivated">@android:color/white</item>
@@ -33,9 +34,16 @@
     <style name="TextLabel2" parent="TextAppearance.AppCompat">
         <item name="android:textColorHint">@color/hint</item>
         <item name="android:textSize">15sp</item>
-        <item name="colorAccent">@color/colorPrimary</item>
+      <item name="colorAccent">@color/colorPrimary</item>
         <item name="colorControlNormal">@color/colorPrimary</item>
         <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+    <style name="TextLabel3" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="colorAccent">#9e9e9e</item>
+        <item name="colorControlNormal">#9e9e9e</item>
+        <item name="colorControlActivated">#9e9e9e</item>
     </style>
 
     <style name="Widget.MyApp.ActionBar" parent="Widget.AppCompat.ActionBar">
@@ -49,7 +57,12 @@
         <item name="android:textSize">15sp</item>
 
     </style>
-
+    <style name="FullWidthEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:padding">20dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">#bdbdbd</item>
+        <item name="android:textSize">15sp</item>
+    </style>
 
 
 </resources>

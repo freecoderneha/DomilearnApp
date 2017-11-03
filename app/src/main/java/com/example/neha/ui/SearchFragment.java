@@ -7,6 +7,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
+
+import java.util.ArrayList;
 
 public class SearchFragment extends Fragment {
     public static SearchFragment newInstance() {

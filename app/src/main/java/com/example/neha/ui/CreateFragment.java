@@ -32,7 +32,7 @@ public class CreateFragment extends Fragment {
         AppCompatActivity activity = (AppCompatActivity) getActivity();
 
         activity.setSupportActionBar(toolbar);
-        activity.getSupportActionBar().setTitle("  Courses");
+        activity.getSupportActionBar().setTitle("  Create");
         Button button=(Button)v.findViewById(R.id.button_create);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

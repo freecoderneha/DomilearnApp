@@ -37,7 +37,7 @@ public class NewFragment extends Fragment {
         allSampleData = new ArrayList<SectionDataModel>();
 
         activity.setSupportActionBar(toolbar);
-        activity.getSupportActionBar().setTitle("  Courses");
+        activity.getSupportActionBar().setTitle("  New");
 
 
 

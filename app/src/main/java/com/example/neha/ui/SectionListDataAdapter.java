@@ -71,15 +71,12 @@ public class SectionListDataAdapter extends RecyclerView.Adapter<SectionListData
                 public void onClick(View v) {
 
 
-                   Intent i=new Intent(mContext,DetailActivity.class);
-                   mContext.startActivity(i);
+                    Intent i=new Intent(mContext,DetailActivity.class);
+                    mContext.startActivity(i);
 
                 }
             });
-
-
         }
-
     }
 
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -13,61 +13,78 @@
         app:layout_scrollFlags="scroll|enterAlways"
         style="@style/Widget.MyApp.ActionBar"/>
     <AutoCompleteTextView
+        android:id="@+id/subject"
         style="@style/FullWidthEditText"
         android:layout_width="match_parent"
         android:drawableLeft="@drawable/ic_action_import_contacts"
         android:layout_height="wrap_content"
-        android:hint="   Subject"/>
+        android:hint="   Subject"
+        android:layout_below="@+id/toolbar"/>
     <View
+        android:id="@+id/view1"
         android:layout_width="match_parent"
         android:layout_height="0.5dip"
         android:layout_marginTop="5dp"
-        android:background="#bdbdbd" />
+        android:background="#bdbdbd"
+        android:layout_below="@+id/subject"/>
     <AutoCompleteTextView
+        android:id="@+id/topic"
         style="@style/FullWidthEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/ic_action_assignment"
-        android:hint="   Topic"/>
+        android:hint="   Topic"
+        android:layout_below="@+id/view1"/>
     <View
+        android:id="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="0.5dip"
         android:layout_marginTop="5dp"
-        android:background="#bdbdbd"/>
+        android:background="#bdbdbd"
+        android:layout_below="@+id/topic"/>
     <AutoCompleteTextView
+        android:id="@+id/topic_details"
         style="@style/FullWidthEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLines="3"
         android:drawableLeft="@drawable/ic_action_chrome_reader_mode"
-        android:hint="   Topic details"/>
+        android:hint="   Topic details"
+        android:layout_below="@+id/view2"/>
     <View
+        android:id="@+id/view3"
         android:layout_width="match_parent"
         android:layout_height="0.5dip"
         android:layout_marginTop="5dp"
-        android:background="#bdbdbd" />
+        android:background="#bdbdbd"
+        android:layout_below="@+id/topic_details" />
     <AutoCompleteTextView
+        android:id="@+id/aimed_at"
         style="@style/FullWidthEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
       android:drawableLeft="@drawable/ic_action_my_location"
-        android:hint="   Aimed at"/>
+        android:hint="   Aimed at"
+        android:layout_below="@+id/view3"/>
     <View
+        android:id="@+id/view4"
         android:layout_width="match_parent"
         android:layout_height="0.5dip"
         android:layout_marginTop="5dp"
-        android:background="#bdbdbd" />
+        android:background="#bdbdbd"
+        android:layout_below="@+id/aimed_at"/>
+
     <Button
         android:id="@+id/button_create"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text="start creating"
+        android:layout_marginBottom="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:drawableRight="@drawable/ic_action_arrow_forward"
         android:fontFamily="sans-serif-condensed"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="100dp"
-        android:drawableRight="@drawable/ic_action_arrow_forward"/>
-
-</LinearLayout>
+        android:text="start creating"
+        android:textColor="@android:color/white" />
+</RelativeLayout>

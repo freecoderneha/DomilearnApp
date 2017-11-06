@@ -19,6 +19,8 @@
         </activity>
         <activity android:name=".PickActivity"
             android:screenOrientation="portrait" ></activity>
+        <activity android:name=".SearchActivity"
+            android:screenOrientation="portrait" ></activity>
         <activity android:name=".CoursesActivity"
             android:screenOrientation="portrait" ></activity>
 <activity android:name=".DetailActivity"

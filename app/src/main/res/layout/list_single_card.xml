@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="250dp"
-    android:layout_height="300dp"
+    android:layout_height="350dp"
     android:orientation="horizontal"
     app:cardCornerRadius="5dp"
   >
@@ -36,6 +36,16 @@
             android:textColor="@color/colorPrimary"
             android:textAllCaps="true"
            />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="TITLE"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            />
         <TextView
             android:id="@+id/description"
             android:layout_width="match_parent"

@@ -5,14 +5,15 @@ public class PostsItemModel {
     private String date;
     private String description;
     private int image;
-
+private String title;
     public PostsItemModel() {
     }
 
-    public PostsItemModel(int image, String date, String description) {
+    public PostsItemModel(int image, String date, String description,String title) {
         this.image = image;
         this.date = date;
         this.description = description;
+    this.title=title;
     }
 
 
@@ -32,6 +33,8 @@ public class PostsItemModel {
         this.date = date;
     }
 
+    public String getTitle(){return title;}
+    public void setTitle(String title){this.title=title;}
     public String getDescription() {
         return description;
     }

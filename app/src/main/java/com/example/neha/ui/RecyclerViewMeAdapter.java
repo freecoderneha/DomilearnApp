@@ -40,6 +40,7 @@ public class RecyclerViewMeAdapter extends RecyclerView.Adapter<RecyclerViewMeAd
         holder.date.setText(singleItem.getDate());
         holder.description.setText(singleItem.getDescription());
         holder.itemImage.setImageResource(singleItem.getImage());
+        holder.title.setText(singleItem.getTitle());
     }
 
     @Override
@@ -53,7 +54,7 @@ public class RecyclerViewMeAdapter extends RecyclerView.Adapter<RecyclerViewMeAd
         protected TextView date;
         protected TextView description;
         protected ImageView itemImage;
-
+protected  TextView title;
 
         public SingleItemRowHolder(View view) {
             super(view);
@@ -61,6 +62,7 @@ public class RecyclerViewMeAdapter extends RecyclerView.Adapter<RecyclerViewMeAd
             this.date=(TextView) view.findViewById(R.id.date);
             this.description=(TextView) view.findViewById(R.id.description);
             this.itemImage = (ImageView) view.findViewById(R.id.itemImage);
+            this.title=(TextView) view.findViewById(R.id.title);
         }
     }
 }

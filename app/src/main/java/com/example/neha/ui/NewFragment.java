@@ -62,7 +62,7 @@ public class NewFragment extends Fragment {
 
             ArrayList<SingleItemModel> singleItem = new ArrayList<SingleItemModel>();
             for (int j = 0; j <= 5; j++) {
-                singleItem.add(new SingleItemModel(R.drawable.image1,"27.10.17","Machine Learning Basics","neha sharma"));
+                singleItem.add(new SingleItemModel(R.drawable.image1,"27.10.17","Machine Learning Basics","neha sharma","TITLE"));
             }
 
             dm.setAllItemsInSection(singleItem);

@@ -62,7 +62,7 @@ public class MeFragment extends Fragment {
     private void populatRecyclerView() {
         ArrayList<PostsItemModel> dataList = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            dataList.add(new PostsItemModel(R.drawable.image1,"27.10.17","Machine Learning Basics"));
+            dataList.add(new PostsItemModel(R.drawable.image1,"27.10.17","Machine Learning Basics","TITLE"));
         }
         RecyclerViewMeAdapter  adapter = new RecyclerViewMeAdapter(getActivity(), dataList);
         recyclerView.setAdapter(adapter);// set adapter on recyclerview

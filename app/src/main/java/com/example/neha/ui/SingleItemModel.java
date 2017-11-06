@@ -8,15 +8,17 @@ public class SingleItemModel {
     private String description;
     private String created;
     private int image;
+    private String title;
 
     public SingleItemModel() {
     }
 
-    public SingleItemModel(int image, String date, String description, String created) {
+    public SingleItemModel(int image, String date, String description, String created,String title) {
         this.image = image;
         this.date = date;
         this.description = description;
         this.created = created;
+        this.title=title;
     }
 
 
@@ -52,5 +54,8 @@ public class SingleItemModel {
     public void setCreated(String created) {
         this.created = created;
     }
+
+    public String getTitle() {return title;}
+    public void setTitle(String title) {this.title=title;}
 
 }

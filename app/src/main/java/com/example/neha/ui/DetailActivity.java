@@ -86,8 +86,8 @@ public class DetailActivity extends AppCompatActivity {
                 return true;
             case R.id.action_item3:
                 return true;
-
         }
         return super.onOptionsItemSelected(item);
     }
-}
+
+    }

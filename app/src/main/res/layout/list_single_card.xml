@@ -2,29 +2,39 @@
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="250dp"
-    android:layout_height="350dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    app:cardCornerRadius="5dp"
-  >
+    card_view:contentPadding="7dp"
+    card_view:cardCornerRadius="7dp"
+    card_view:cardElevation="7dp"
+    card_view:cardBackgroundColor="#FF9800"
+    android:layout_margin="10dp">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="?android:selectableItemBackground"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <ImageView
             android:id="@+id/itemImage"
             android:layout_width="250dp"
             android:layout_height="200dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"/>
         <TextView
             android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="date"
             android:textSize="12sp"
-            android:layout_margin="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
             />
         <TextView
             android:id="@+id/created"
@@ -35,6 +45,7 @@
             android:fontFamily="sans-serif-condensed"
             android:textColor="@color/colorPrimary"
             android:textAllCaps="true"
+
            />
         <TextView
             android:id="@+id/title"
@@ -45,16 +56,29 @@
             android:fontFamily="sans-serif-condensed"
             android:textAllCaps="true"
             android:textStyle="bold"
+            android:drawableRight="@drawable/ic_action_check_circle"
+            android:textSize="15sp"
+
             />
         <TextView
             android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:maxLines="1"
-            android:textSize="18sp"
+            android:maxLines="3"
+            android:textSize="12sp"
             android:text="description"
-            android:drawableRight="@drawable/ic_action_check_circle"/>
+            />
+
+        <TextView
+            android:id="@+id/aimed_at"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:text="Aimed At"
+            />
 
     </LinearLayout>
 

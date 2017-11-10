@@ -41,6 +41,7 @@ public class RecyclerViewMeAdapter extends RecyclerView.Adapter<RecyclerViewMeAd
         holder.description.setText(singleItem.getDescription());
         holder.itemImage.setImageResource(singleItem.getImage());
         holder.title.setText(singleItem.getTitle());
+        holder.aimed.setText(singleItem.getAimed());
     }
 
     @Override
@@ -55,7 +56,7 @@ public class RecyclerViewMeAdapter extends RecyclerView.Adapter<RecyclerViewMeAd
         protected TextView description;
         protected ImageView itemImage;
 protected  TextView title;
-
+        protected  TextView aimed;
         public SingleItemRowHolder(View view) {
             super(view);
 
@@ -63,6 +64,14 @@ protected  TextView title;
             this.description=(TextView) view.findViewById(R.id.description);
             this.itemImage = (ImageView) view.findViewById(R.id.itemImage);
             this.title=(TextView) view.findViewById(R.id.title);
+            this.aimed=(TextView) view.findViewById(R.id.aimed);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i=new Intent(mContext,EditPost.class);
+                    mContext.startActivity(i);
+                }
+            });
         }
     }
 }

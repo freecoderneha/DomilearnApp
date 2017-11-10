@@ -6,14 +6,16 @@ public class PostsItemModel {
     private String description;
     private int image;
 private String title;
+    private String aimed;
     public PostsItemModel() {
     }
 
-    public PostsItemModel(int image, String date, String description,String title) {
+    public PostsItemModel(int image, String date, String description,String title,String aimed) {
         this.image = image;
         this.date = date;
         this.description = description;
     this.title=title;
+        this.aimed=aimed;
     }
 
 
@@ -42,5 +44,6 @@ private String title;
     public void setDescription(String description) {
         this.description = description;
     }
-
+    public String getAimed(){return aimed;}
+    public void setAimed(String aimed){this.aimed=aimed;}
 }

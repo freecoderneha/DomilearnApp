@@ -1,5 +1,6 @@
 package com.example.neha.ui;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -28,7 +29,7 @@ import java.util.ArrayList;
 
 public class MeFragment extends Fragment {
     private Resources mResources;
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerView1,recyclerView2;
     ArrayList<PostsItemModel> allSampleData;
     public static MeFragment newInstance() {
         MeFragment fragment = new MeFragment();
@@ -44,7 +45,8 @@ public class MeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_try, container, false);
-        recyclerView = (RecyclerView)v.findViewById(R.id.recyclerview1);
+        recyclerView1 = (RecyclerView)v.findViewById(R.id.recyclerview1);
+        recyclerView2=(RecyclerView)v.findViewById(R.id.recyclerview2) ;
         initViews();
         populatRecyclerView();
 
@@ -56,23 +58,43 @@ public class MeFragment extends Fragment {
         image.setImageBitmap(bitmap);
         RoundedBitmapDrawable drawable = createRoundedBitmapImageDrawableWithBorder(bitmap);
         image.setImageDrawable(drawable);
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getActivity(),EditProfile.class);
+                startActivity(i);
+            }
+        });
         return v;
     }
 
     private void populatRecyclerView() {
         ArrayList<PostsItemModel> dataList = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            dataList.add(new PostsItemModel(R.drawable.image1,"27.10.17","Machine Learning Basics","TITLE"));
+            dataList.add(new PostsItemModel(R.drawable.image1,"27.10.17","Machine Learning Basics","TITLE","Aimed at"));
         }
+        ArrayList<PickItem> dataList2=new ArrayList<>();
+
+            dataList2.add(new PickItem("JAVA",R.drawable.image1,R.drawable.scrim3));
+       dataList2.add(new PickItem("AR",R.drawable.image1,R.drawable.scrim));
+        dataList2.add(new PickItem("MACHINE",R.drawable.image1,R.drawable.scrim4));
+        dataList2.add(new PickItem("TECH",R.drawable.image1,R.drawable.scrim7));
+        dataList2.add(new PickItem("JAVA",R.drawable.image1,R.drawable.scrim3));
         RecyclerViewMeAdapter  adapter = new RecyclerViewMeAdapter(getActivity(), dataList);
-        recyclerView.setAdapter(adapter);// set adapter on recyclerview
+        RecyclerViewCoursesAdapter  adapter2 = new RecyclerViewCoursesAdapter(getActivity(), dataList2);
+        recyclerView1.setAdapter(adapter);
+        recyclerView2.setAdapter(adapter2);// set adapter on recyclerview
         adapter.notifyDataSetChanged();
+        adapter2.notifyDataSetChanged();
     }
 
     private void initViews() {
 
-        recyclerView.setHasFixedSize(true);
-        recyclerView
+        recyclerView1.setHasFixedSize(true);
+        recyclerView1
+                .setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,false));
+        recyclerView2.setHasFixedSize(true);
+        recyclerView2
                 .setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,false));
     }
 

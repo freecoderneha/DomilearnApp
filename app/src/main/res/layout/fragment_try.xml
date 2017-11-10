@@ -10,64 +10,30 @@
     android:orientation="vertical"
     android:background="@drawable/scrim7"
     android:theme="@style/AppTheme">
-    <LinearLayout
-        android:id="@+id/linear1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:orientation="horizontal"
-       >
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="30dp"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="0"
-                android:textColor="@android:color/white"
-                android:textSize="30sp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="FOLLOWERS"
-                android:textColor="#303f9f"
-                android:textSize="12sp"/>
-        </LinearLayout>
+<FrameLayout
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="10dp">
         <ImageView
             android:id="@+id/image_profile"
-            android:layout_width="125dp"
-            android:layout_height="125dp"
-            android:layout_gravity="bottom|center_horizontal"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:src="@drawable/image1"
+            android:layout_gravity="bottom|center_horizontal"
+
             />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginTop="30dp"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="0"
-                android:textColor="@android:color/white"
-                android:textSize="30sp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="FOLLOWING"
-                android:textColor="#303f9f"
-                android:textSize="12sp"/>
-        </LinearLayout>
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_camera"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_shortcut_create_blue"
+        android:layout_gravity="top|right"
+
+
+        />
+</FrameLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -107,24 +73,35 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:background="@android:color/white" />
-    <LinearLayout
-        android:id="@+id/linear2"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
             android:gravity="center_horizontal"
             android:layout_weight="3"
             android:text="MY POSTS"
+            android:layout_marginTop="10dp"
             android:textStyle="bold"
             android:textColor="#303f9f"/>
 
-        </LinearLayout>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_horizontal"
+        android:layout_weight="3"
+        android:text="MY COURSES"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="#303f9f"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
@@ -164,11 +141,7 @@
         android:layout_height="0.5dip"
         android:layout_marginTop="10dp"
         android:background="@android:color/transparent" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.5dip"
-        android:layout_marginTop="10dp"
-        android:background="@android:color/transparent" />
+
 
 </LinearLayout>
     </ScrollView>

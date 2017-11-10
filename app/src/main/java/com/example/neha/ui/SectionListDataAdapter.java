@@ -42,6 +42,7 @@ public class SectionListDataAdapter extends RecyclerView.Adapter<SectionListData
         holder.created.setText(singleItem.getCreated());
 holder.title.setText(singleItem.getTitle());
         holder.itemImage.setImageResource(singleItem.getImage());
+        holder.aimed.setText(singleItem.getAimed());
     }
 
     @Override
@@ -55,6 +56,7 @@ holder.title.setText(singleItem.getTitle());
         protected TextView description;
         protected TextView created;
         protected ImageView itemImage;
+        protected TextView aimed;
 
 protected TextView title;
         public SingleItemRowHolder(View view) {
@@ -64,13 +66,11 @@ protected TextView title;
             this.description=(TextView) view.findViewById(R.id.description);
             this.created=(TextView) view.findViewById(R.id.created);
             this.itemImage = (ImageView) view.findViewById(R.id.itemImage);
-this.title=(TextView) view.findViewById(R.id.title);
-
+            this.title=(TextView) view.findViewById(R.id.title);
+            this.aimed=(TextView) view.findViewById(R.id.aimed_at);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-
                     Intent i=new Intent(mContext,DetailActivity.class);
                     mContext.startActivity(i);
 

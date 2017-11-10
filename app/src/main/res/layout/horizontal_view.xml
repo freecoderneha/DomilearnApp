@@ -2,9 +2,14 @@
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="200dp"
-    android:layout_height="250dp"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="horizontal"
+    card_view:contentPadding="7dp"
+    card_view:cardCornerRadius="7dp"
+    card_view:cardElevation="7dp"
+    android:layout_margin="1dp"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,19 +35,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TITLE"
-            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textSize="15sp"
             android:layout_margin="5dp"
+            android:drawableRight="@drawable/ic_action_check_circle"
             />
+
+
         <TextView
             android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:maxLines="1"
-            android:textSize="18sp"
+            android:textSize="12sp"
             android:text="description"
-            android:drawableRight="@drawable/ic_action_check_circle"/>
-
+           />
+        <TextView
+            android:id="@+id/aimed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aimed at"
+            android:textSize="12sp"
+            android:layout_margin="5dp"
+            />
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

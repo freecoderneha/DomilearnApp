@@ -50,12 +50,12 @@ public class CustomDialogClass extends Dialog implements
         TextView messageTextView = (TextView) dialog.findViewById(R.id.text_ok);
         messageTextView.setText(message);
         Button okButton = (Button) dialog.findViewById(R.id.button_ok);
-okButton.setOnClickListener(new View.OnClickListener() {
+        okButton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         dialog.dismiss();
     }
 });
-dialog.show();
+        dialog.show();
     }
 }

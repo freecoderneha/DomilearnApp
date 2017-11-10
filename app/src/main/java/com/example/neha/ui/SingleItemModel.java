@@ -9,16 +9,18 @@ public class SingleItemModel {
     private String created;
     private int image;
     private String title;
+private String aimed;
 
     public SingleItemModel() {
     }
 
-    public SingleItemModel(int image, String date, String description, String created,String title) {
+    public SingleItemModel(int image, String date, String description, String created,String title,String aimed) {
         this.image = image;
         this.date = date;
         this.description = description;
         this.created = created;
         this.title=title;
+        this.aimed=aimed;
     }
 
 
@@ -57,5 +59,8 @@ public class SingleItemModel {
 
     public String getTitle() {return title;}
     public void setTitle(String title) {this.title=title;}
+
+    public String getAimed() {return  aimed;}
+    public void setAimed(String aimed) {this.aimed=aimed;}
 
 }

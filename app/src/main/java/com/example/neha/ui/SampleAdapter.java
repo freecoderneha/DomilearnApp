@@ -33,9 +33,8 @@ public class SampleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         TextView textView = new TextView(parent.getContext());
         textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16);
         textView.setTypeface(null, Typeface.BOLD);
-
         view.addView(textView);
-        view.setLayoutParams(new LinearLayout.LayoutParams(300, 300));
+        view.setLayoutParams(new LinearLayout.LayoutParams(300, 250));
         view.setGravity(Gravity.CENTER);
         return new ItemViewHolder(view);
     }

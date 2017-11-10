@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/white"
+        app:contentInsetStart="0dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        style="@style/Widget.MyApp.ActionBar"/>
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@android:color/black"
+           />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.70"
+            android:text="About"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@android:color/black"
+            />
+</LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:inputType="textMultiLine"
+        android:layout_height="wrap_content"
+        android:hint="xyz"
+        android:textColorHint="@color/hint"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:id="@+id/message_input"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center_horizontal"
+      />
+</LinearLayout>

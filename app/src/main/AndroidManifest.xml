@@ -27,6 +27,14 @@
     android:screenOrientation="portrait" ></activity>
         <activity android:name=".CreateActivity"
             android:screenOrientation="portrait" ></activity>
+        <activity android:name=".EditProfile"
+            android:screenOrientation="portrait" ></activity>
+        <activity android:name=".EditPost"
+            android:screenOrientation="portrait" ></activity>
+        <activity android:name=".EditPostFinal"
+            android:screenOrientation="portrait" ></activity>
+        <activity android:name=".AboutUsActivity"
+            android:screenOrientation="portrait" ></activity>
     </application>
 
 </manifest>

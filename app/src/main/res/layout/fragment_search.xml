@@ -6,9 +6,11 @@
     android:layout_width="match_parent"
     android:orientation="vertical">
 
-<android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="100dp"
+    android:layout_marginLeft="10dp"
     android:background="@android:color/white"
     app:contentInsetStart="0dp"
     app:layout_scrollFlags="scroll|enterAlways"
@@ -41,6 +43,8 @@
         android:layout_height="120dp"
         android:background="@android:color/white"
         android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:elevation="6dp">
         <TextView
             android:layout_width="wrap_content"

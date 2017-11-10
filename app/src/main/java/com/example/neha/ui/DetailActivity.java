@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 
@@ -35,7 +36,20 @@ public class DetailActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+final ImageView img=(ImageView)findViewById(R.id.like);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+img.setImageResource(R.drawable.ic_action_thumb_up_blue);
+            }
+        });
+        final ImageView img1=(ImageView)findViewById(R.id.dislike);
+        img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                img1.setImageResource(R.drawable.ic_action_thumb_down_blue);
+            }
+        });
     }
 
     private void initCollapsingToolbar() {
@@ -80,14 +94,19 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_item1:
-                return true;
+
             case R.id.action_item2:
                 return true;
-            case R.id.action_item3:
-                return true;
+            case android.R.id.home:
+
+                onBackPressed();
         }
         return super.onOptionsItemSelected(item);
+    }
+    @Override
+    public void onBackPressed() {
+
+        finish();
     }
 
     }

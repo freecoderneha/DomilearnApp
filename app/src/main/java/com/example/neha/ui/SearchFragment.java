@@ -31,7 +31,6 @@ public class SearchFragment extends Fragment {
         Toolbar toolbar = (Toolbar)v.findViewById(R.id.toolbar);
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         activity.setSupportActionBar(toolbar);
-        activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         EditText ed=(EditText)v.findViewById(R.id.searchEditText);
         ed.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -83,7 +83,7 @@
         android:layout_marginBottom="80dp"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary"
-        android:drawableRight="@drawable/ic_action_arrow_forward"
+        android:drawableRight="@drawable/ic_action_arrow_forward_white"
         android:fontFamily="sans-serif-condensed"
         android:text="start creating"
         android:textColor="@android:color/white" />

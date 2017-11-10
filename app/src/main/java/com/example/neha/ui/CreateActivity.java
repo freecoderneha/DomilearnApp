@@ -36,8 +36,16 @@ public class CreateActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_check:
-                return true;
+                onBackPressed();
+            case android.R.id.home:
+
+                onBackPressed();
         }
         return super.onOptionsItemSelected(item);
+    }
+    @Override
+    public void onBackPressed() {
+
+        finish();
     }
 }

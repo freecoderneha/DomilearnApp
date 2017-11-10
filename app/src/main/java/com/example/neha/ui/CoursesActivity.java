@@ -1,6 +1,7 @@
 package com.example.neha.ui;
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -86,6 +87,10 @@ public class CoursesActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_item3:
+                return true;
+            case R.id.action_item4:
+                Intent i=new Intent(CoursesActivity.this,AboutUsActivity.class);
+                startActivity(i);
                 return true;
         }
         return super.onOptionsItemSelected(item);

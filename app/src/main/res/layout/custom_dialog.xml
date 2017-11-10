@@ -3,62 +3,68 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="wrap_content"
     android:elevation="6dp"
-    android:background="@android:color/white"
-    android:layout_width="match_parent">
+    android:background="@drawable/shape_circular"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
 <LinearLayout
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-
+    android:layout_height="242dp"
     android:alpha="0.5"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    >
 
     <TextView
         android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colorPrimary"
         android:text="Forgot Password?"
-        android:textSize="22sp"
-        android:textStyle="bold"/>
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+       />
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:textColor="@android:color/black"
         android:text="Enter you e-mail and we will send you a reset password link"
         android:textSize="15dp"
        />
 
 
-    <android.support.design.widget.TextInputLayout
+    <AutoCompleteTextView
+        android:id="@+id/aimed_at"
+        style="@style/FullWidthEditText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:theme="@style/TextLabel1">
-
-        <AutoCompleteTextView
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed"
-            android:hint="@string/prompt_email"
-            android:inputType="textEmailAddress"
-            android:maxLines="1"
-            android:singleLine="true" />
-
-    </android.support.design.widget.TextInputLayout>
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:hint="E-mail or Phone Number" />
     <Button
         android:id="@+id/reset"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:text="Send Reset Link"/>
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Send Reset Link"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"/>
 </LinearLayout>
     </FrameLayout>

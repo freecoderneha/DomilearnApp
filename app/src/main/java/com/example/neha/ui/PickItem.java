@@ -12,6 +12,11 @@ public class PickItem {
         this.view = view;
         this.color=color;
     }
+    public PickItem(String name, int thumbnail, int view) {
+        this.name = name;
+        this.thumbnail = thumbnail;
+        this.view = view;
+    }
 
 
     public String getName() {

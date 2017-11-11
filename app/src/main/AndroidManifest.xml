@@ -35,6 +35,10 @@
             android:screenOrientation="portrait" ></activity>
         <activity android:name=".AboutUsActivity"
             android:screenOrientation="portrait" ></activity>
+        <activity android:name=".MePostsActivity"
+            android:screenOrientation="portrait" ></activity>
+        <activity android:name=".MeCoursesActivity"
+            android:screenOrientation="portrait" ></activity>
     </application>
 
 </manifest>

@@ -4,7 +4,8 @@ public class PickItem {
     String name;//title
     int thumbnail;//image
     int view;//view scrim
-    int color;//button scrim
+    int color;
+    int id;
 
     public PickItem(String name, int thumbnail, int view,int color) {
         this.name = name;
@@ -16,6 +17,16 @@ public class PickItem {
         this.name = name;
         this.thumbnail = thumbnail;
         this.view = view;
+    }
+    public PickItem() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
 

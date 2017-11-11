@@ -11,6 +11,7 @@
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:layout_marginLeft="10dp"
+    android:elevation="6dp"
     android:background="@android:color/white"
     app:contentInsetStart="0dp"
     app:layout_scrollFlags="scroll|enterAlways"
@@ -67,11 +68,11 @@
             android:layout_marginTop="30dp"
             android:orientation="vertical">
             <ImageView
-                android:layout_width="40dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_action_all_inclusive"
-                android:textSize="30sp"/>
+                android:src="@drawable/ic_action_all_inclusive" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -90,8 +91,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_action_supervisor_account"
-                    android:textSize="30sp"/>
+                    android:src="@drawable/ic_action_supervisor_account" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -110,8 +110,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/ic_action_dns"
-                    android:textSize="30sp"/>
+                    android:src="@drawable/ic_action_dns" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/scrim7"
     android:theme="@style/AppTheme">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        app:contentInsetStart="0dp"
+        android:elevation="6dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        style="@style/Widget.MyApp.ActionBar"/>
 <FrameLayout
     android:layout_width="150dp"
     android:layout_height="150dp"
@@ -20,29 +28,21 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:src="@drawable/image1"
-            android:layout_gravity="bottom|center_horizontal"
-
-            />
-
+            android:layout_gravity="bottom|center_horizontal" />
     <ImageView
         android:id="@+id/iv_camera"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/ic_shortcut_create_blue"
-        android:layout_gravity="top|right"
-
-
-        />
+        android:layout_gravity="bottom|right" />
 </FrameLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:text="Neha sharma"
-        android:textAllCaps="true"
+        android:text="Neha Sharma"
         android:layout_marginTop="18dp"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
+        android:textColor="@android:color/black"
         android:textSize="20sp" />
     <TextView
         android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
         android:layout_marginRight="40dp"
         android:layout_marginTop="5dp"
         android:text="UNDERGRADUATE"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorPrimary"
         android:textSize="10sp"/>
     <TextView
         android:layout_width="wrap_content"
@@ -63,43 +63,67 @@
         android:layout_marginTop="18dp"
         android:text="I am a UI Designer and working on mobile app development for both IOS and ANDROID"
         android:textSize="15sp"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"/>
+        android:textAlignment="center" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dip"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:background="@android:color/white" />
-
+        android:layout_marginTop="15dp"
+        android:background="@android:color/darker_gray" />
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="30dp"
-            android:gravity="center_horizontal"
             android:layout_weight="3"
             android:text="MY POSTS"
             android:layout_marginTop="10dp"
-            android:textStyle="bold"
-            android:textColor="#303f9f"/>
-
-
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/view_all1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="View All"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold" />
+        </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
         android:scrollbars="vertical" />
-    <TextView
+    <LinearLayout
+        android:id="@+id/linear2"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:gravity="center_horizontal"
-        android:layout_weight="3"
-        android:text="MY COURSES"
-        android:layout_marginTop="10dp"
-        android:textStyle="bold"
-        android:textColor="#303f9f"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="3"
+            android:text="MY COURSES"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/view_all2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="View All"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold" />
+    </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerview2"
         android:layout_width="match_parent"
@@ -141,7 +165,5 @@
         android:layout_height="0.5dip"
         android:layout_marginTop="10dp"
         android:background="@android:color/transparent" />
-
-
 </LinearLayout>
     </ScrollView>

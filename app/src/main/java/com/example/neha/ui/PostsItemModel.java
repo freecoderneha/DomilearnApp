@@ -14,7 +14,7 @@ private String title;
         this.image = image;
         this.date = date;
         this.description = description;
-    this.title=title;
+        this.title=title;
         this.aimed=aimed;
     }
 

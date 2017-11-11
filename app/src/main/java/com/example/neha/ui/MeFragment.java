@@ -11,8 +11,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -30,7 +32,8 @@ import java.util.ArrayList;
 public class MeFragment extends Fragment {
     private Resources mResources;
     private RecyclerView recyclerView1,recyclerView2;
-    ArrayList<PostsItemModel> allSampleData;
+    private Toolbar toolbar;
+
     public static MeFragment newInstance() {
         MeFragment fragment = new MeFragment();
         return fragment;
@@ -45,6 +48,13 @@ public class MeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_try, container, false);
+        toolbar = (Toolbar)v.findViewById(R.id.toolbar);
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+
+
+
+        activity.setSupportActionBar(toolbar);
+        activity.getSupportActionBar().setTitle("  Profile");
         recyclerView1 = (RecyclerView)v.findViewById(R.id.recyclerview1);
         recyclerView2=(RecyclerView)v.findViewById(R.id.recyclerview2) ;
         initViews();
@@ -62,6 +72,22 @@ public class MeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getActivity(),EditProfile.class);
+                startActivity(i);
+            }
+        });
+        TextView view1=(TextView)v.findViewById(R.id.view_all1);
+        view1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+Intent i=new Intent(getActivity(),MePostsActivity.class);
+                startActivity(i);
+            }
+        });
+        TextView view2=(TextView)v.findViewById(R.id.view_all2);
+        view2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+Intent i=new Intent(getActivity(),MeCoursesActivity.class);
                 startActivity(i);
             }
         });

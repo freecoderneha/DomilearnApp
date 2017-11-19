@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -20,6 +27,7 @@
         android:drawableLeft="@drawable/ic_action_import_contacts"
         android:layout_height="wrap_content"
         android:hint="   Subject"
+        android:maxLines="2"
         android:layout_below="@+id/toolbar"/>
     <View
         android:id="@+id/view1"
@@ -48,7 +56,7 @@
         style="@style/FullWidthEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLines="3"
+        android:maxLines="20"
         android:drawableLeft="@drawable/ic_action_chrome_reader_mode"
         android:hint="   Topic details"
         android:layout_below="@+id/view2"/>
@@ -88,4 +96,6 @@
         android:fontFamily="sans-serif-condensed"
         android:text="start creating"
         android:textColor="@android:color/white" />
+
 </RelativeLayout>
+    </ScrollView>

@@ -77,7 +77,6 @@
     <style name="FullWidthEditText2" parent="Widget.AppCompat.EditText">
         <item name="android:textColor">#bdbdbd</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:backgroundTint">@color/colorPrimary</item>
     </style>
     <style name="CategoryStyle">
         <item name="android:layout_height">wrap_content</item>
@@ -88,6 +87,8 @@
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textAppearance">?android:textAppearanceSmall</item>
     </style>
+
+
 
 
 

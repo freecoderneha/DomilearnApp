@@ -6,9 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-/**
- * Created by NEHA on 10-11-2017.
- */
+
 
 public class AboutUsActivity extends AppCompatActivity {
     private Toolbar toolbar;
